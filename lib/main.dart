@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'music/music_page.dart';
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -10,7 +8,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: MusicPage(),
+        body: const SizedBox.shrink(), // TODO: Create music page
       ),
     );
   }
