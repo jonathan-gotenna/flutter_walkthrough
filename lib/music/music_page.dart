@@ -13,7 +13,9 @@ class MusicPage extends HookConsumerWidget {
     return Scaffold(
       body: songs.when(
         data: (songs) => SongListView(items: songs),
-        error: (error, stackTrace) => const Text("Something went wrong!"),
+        error: (error, stackTrace) => Center(
+          child: Text("$error $stackTrace"),
+        ),
         loading: () => const Center(
           child: CircularProgressIndicator(),
         ),
